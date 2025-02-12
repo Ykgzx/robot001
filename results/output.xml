@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.2 (Python 3.13.1 on win32)" generated="2025-02-12T15:27:40.851930" rpa="false" schemaversion="5">
+<suite id="s1" name="Robot" source="C:\robot">
+<suite id="s1-s1" name="Testcases" source="C:\robot\Testcases">
+<suite id="s1-s1-s1" name="basicRF01" source="C:\robot\Testcases\basicRF01.robot">
+<kw name="Open Browser" owner="SeleniumLibrary" type="SETUP">
+<msg time="2025-02-12T15:27:40.992507" level="INFO">Opening browser 'Chrome' to base url 'http://automationexercise.com'.</msg>
+<arg>http://automationexercise.com</arg>
+<arg>Chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2025-02-12T15:27:40.992212" elapsed="105.410311"/>
+</kw>
+<test id="s1-s1-s1-t1" name="Test Case 16: Place Order: Login before Checkout" line="14">
+<kw name="Verify Home Page">
+<kw name="Title Should Be" owner="SeleniumLibrary">
+<msg time="2025-02-12T15:29:26.407375" level="INFO">Page title is 'Automation Exercise'.</msg>
+<arg>Automation Exercise</arg>
+<doc>Verifies that the current page title equals ``title``.</doc>
+<status status="PASS" start="2025-02-12T15:29:26.404201" elapsed="0.003337"/>
+</kw>
+<status status="PASS" start="2025-02-12T15:29:26.403878" elapsed="0.003792"/>
+</kw>
+<kw name="Login">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>//*[@id="header"]/div/div/div/div[2]/div/ul/li[4]/a</arg>
+<arg>timeout=10s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-02-12T15:29:26.408362" elapsed="0.014293"/>
+</kw>
+<kw name="Click Link" owner="SeleniumLibrary">
+<msg time="2025-02-12T15:29:26.423106" level="INFO">Clicking link '//*[@id="header"]/div/div/div/div[2]/div/ul/li[4]/a'.</msg>
+<arg>//*[@id="header"]/div/div/div/div[2]/div/ul/li[4]/a</arg>
+<doc>Clicks a link identified by ``locator``.</doc>
+<status status="PASS" start="2025-02-12T15:29:26.422834" elapsed="1.634181"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-02-12T15:29:28.057724" level="INFO">Typing text 'fighterxzed723@gmail.com' into text field 'xpath=//input[@name='email']'.</msg>
+<arg>xpath=//input[@name='email']</arg>
+<arg>${email}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-02-12T15:29:28.057277" elapsed="0.052742"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-02-12T15:29:28.110457" level="INFO">Typing text '123456789' into text field 'xpath=//input[@name='password']'.</msg>
+<arg>xpath=//input[@name='password']</arg>
+<arg>${password}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-02-12T15:29:28.110175" elapsed="0.061260"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2025-02-12T15:29:28.171835" level="INFO">Clicking button 'xpath=//button[@data-qa='login-button']'.</msg>
+<arg>xpath=//button[@data-qa='login-button']</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2025-02-12T15:29:28.171596" elapsed="95.701171"/>
+</kw>
+<arg>${EMAIL}</arg>
+<arg>${PASSWORD}</arg>
+<status status="PASS" start="2025-02-12T15:29:26.407945" elapsed="97.465070"/>
+</kw>
+<kw name="Add Products To Cart">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-02-12T15:31:03.874295" level="INFO">Clicking element '/html/body/section[2]/div/div/div[2]/div/div[2]/div/div[1]/div[2]/div/a/i'.</msg>
+<msg time="2025-02-12T15:31:03.998735" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-1.png"&gt;&lt;img src="selenium-screenshot-1.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg time="2025-02-12T15:31:03.998954" level="FAIL">Element with locator '/html/body/section[2]/div/div/div[2]/div/div[2]/div/div[1]/div[2]/div/a/i' not found.</msg>
+<arg>/html/body/section[2]/div/div/div[2]/div/div[2]/div/div[1]/div[2]/div/a/i</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="FAIL" start="2025-02-12T15:31:03.873957" elapsed="0.126616">Element with locator '/html/body/section[2]/div/div/div[2]/div/div[2]/div/div[1]/div[2]/div/a/i' not found.</status>
+</kw>
+<status status="FAIL" start="2025-02-12T15:31:03.873471" elapsed="0.127263">Element with locator '/html/body/section[2]/div/div/div[2]/div/div[2]/div/div[1]/div[2]/div/a/i' not found.</status>
+</kw>
+<kw name="Go To Cart Page">
+<status status="NOT RUN" start="2025-02-12T15:31:04.000972" elapsed="0.000107"/>
+</kw>
+<kw name="Proceed To Checkout">
+<status status="NOT RUN" start="2025-02-12T15:31:04.001206" elapsed="0.000068"/>
+</kw>
+<kw name="Place Order">
+<arg>${CARD_NAME}</arg>
+<arg>${CARD_NUMBER}</arg>
+<arg>${CARD_CVC}</arg>
+<arg>${CARD_EXPIRY}</arg>
+<status status="NOT RUN" start="2025-02-12T15:31:04.001381" elapsed="0.000059"/>
+</kw>
+<kw name="Verify Order Success">
+<status status="NOT RUN" start="2025-02-12T15:31:04.001532" elapsed="0.000051"/>
+</kw>
+<kw name="Delete Account">
+<status status="NOT RUN" start="2025-02-12T15:31:04.001668" elapsed="0.000048"/>
+</kw>
+<doc>This test case automates the process of logging in, adding products to the cart, placing an order, and deleting the account.</doc>
+<tag>login_checkout</tag>
+<tag>place_order</tag>
+<status status="FAIL" start="2025-02-12T15:29:26.402822" elapsed="97.599020">Element with locator '/html/body/section[2]/div/div/div[2]/div/div[2]/div/div[1]/div[2]/div/a/i' not found.</status>
+</test>
+<status status="FAIL" start="2025-02-12T15:27:40.879356" elapsed="203.123548"/>
+</suite>
+<status status="FAIL" start="2025-02-12T15:27:40.877879" elapsed="203.126175"/>
+</suite>
+<status status="FAIL" start="2025-02-12T15:27:40.867268" elapsed="203.137587"/>
+</suite>
+<statistics>
+<total>
+<stat pass="0" fail="1" skip="0">All Tests</stat>
+</total>
+<tag>
+<stat pass="0" fail="1" skip="0">login_checkout</stat>
+<stat pass="0" fail="1" skip="0">place_order</stat>
+</tag>
+<suite>
+<stat name="Robot" id="s1" pass="0" fail="1" skip="0">Robot</stat>
+<stat name="Testcases" id="s1-s1" pass="0" fail="1" skip="0">Robot.Testcases</stat>
+<stat name="basicRF01" id="s1-s1-s1" pass="0" fail="1" skip="0">Robot.Testcases.basicRF01</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
